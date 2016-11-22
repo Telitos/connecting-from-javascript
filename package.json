@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node test_script.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Telitos/connecting-from-javascript#readme",
   "dependencies": {
+    "moment": "^2.17.0",
     "pg": "^6.1.0"
   }
 }
