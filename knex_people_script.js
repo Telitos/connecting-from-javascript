@@ -28,15 +28,15 @@ const print = (result) => {
 }
 
 knex('famous_people')
-.where(function() {
-  this.where('first_name', input)
-  .orWhere('last_name', input)
-})
-.select()
-.then((result) => {
-  console.log(result)
-print(result)})
-.catch((err) => {
-  console.log("error running query;", err)
-knex.destroy()})
-.timeout(10000)
+  .where(function() {
+    this.where('first_name', input)
+    .orWhere('last_name', input)
+  })
+  .select()
+  .then((result) => {
+    print(result)
+  })
+  .catch((err) => {
+    console.log("error running query;", err)
+    knex.destroy()})
+  .timeout(10000)
